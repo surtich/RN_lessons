@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Text, View } from "react-native";
+import { Button, Text, TextInput, View } from "react-native";
 
 const Counter = ({ counter, setCount, removeCounter }) => (
   <View>
@@ -8,8 +8,8 @@ const Counter = ({ counter, setCount, removeCounter }) => (
       <Button onPress={() => setCount(counter + 1)} title="+" />
       <Button onPress={() => setCount(0)} title="reset" />
       <Button onPress={removeCounter} title="remove" />
+      <TextInput value={counter} onChangeText={value => setCount(+value)} />
     </View>
-    <Text>{counter}</Text>
   </View>
 );
 export default Counter;

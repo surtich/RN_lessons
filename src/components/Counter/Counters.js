@@ -39,7 +39,6 @@ class Counters extends Component {
   };
 
   removeCounters = () => {
-    const { counters } = this.state;
     this.setState({
       counters: []
     });
